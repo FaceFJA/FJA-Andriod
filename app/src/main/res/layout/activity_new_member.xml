@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_resister"
+    android:orientation="vertical"
+    android:weightSum="10">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="회원가입"
+        android:textColor="@android:color/white"
+        android:textSize="20dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.53" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.37"
+        android:src="@drawable/ic_main" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.6"
+            android:orientation="vertical"
+            android:weightSum="1.5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.25"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <EditText
+                    android:inputType="textMultiLine|textNoSuggestions"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:background="@drawable/back_edit_new_member"
+                    android:hint="이메일"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@color/edit"
+                    android:textSize="12dp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.05" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.45"
+                    android:background="@drawable/back_edit_button"
+                    android:text="중복확인"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.05" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.25"
+                android:background="@drawable/back_edit_new_member"
+                android:hint="비밀번호"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/edit"
+                android:textSize="12dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.05" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.25"
+                android:background="@drawable/back_edit_new_member"
+                android:hint="비밀번호 확인"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:textColor="@android:color/black"
+                android:textColorHint="@color/edit"
+                android:textSize="12dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.05" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.25"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:background="@drawable/back_edit_new_member"
+                    android:hint="닉네임"
+                    android:padding="10dp"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@color/edit"
+                    android:inputType="textMultiLine|textNoSuggestions"
+                    android:textSize="12dp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.05" />
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.45"
+                    android:background="@drawable/back_edit_button"
+                    android:text="중복확인"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.05" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.25"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/back_edit_new_member"
+                    android:hint="성별"
+                    android:padding="10dp"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:textSize="12dp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.05" />
+
+                <Button
+                    android:id="@+id/man"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.45"
+                    android:background="@drawable/back_choose_gender"
+                    android:text="남"
+                    android:textSize="12dp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.05" />
+
+                <Button
+                    android:id="@+id/woman"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.45"
+                    android:background="@drawable/back_choose_gender"
+                    android:text="여"
+                    android:textSize="12dp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.05" />
+
+                <Button
+                    android:id="@+id/another"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.45"
+                    android:background="@drawable/back_choose_gender"
+                    android:text="기타"
+                    android:textSize="12dp"
+                    android:button="@null"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.9"
+        android:background="#ff5050"
+        android:text="회원가입"
+        android:textSize="16dp" />
+</LinearLayout>
