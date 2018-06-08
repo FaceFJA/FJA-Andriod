@@ -1,12 +1,14 @@
 package com.example.ty395.fja;
 
 import android.os.Bundle;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.v4.app.Fragment;
 import android.support.annotation.Nullable;
 import android.support.constraint.ConstraintLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 public class Fragment1 extends Fragment {
     public Fragment1(){}

@@ -7,6 +7,7 @@ import android.support.constraint.ConstraintLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 public class Fragment2 extends Fragment {
     public Fragment2(){}

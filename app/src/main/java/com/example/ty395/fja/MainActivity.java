@@ -2,10 +2,12 @@ package com.example.ty395.fja;
 
 import android.support.v4.app.Fragment;
 import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+
 public class MainActivity extends AppCompatActivity {
 
     Toolbar toolbar;
@@ -13,12 +15,13 @@ public class MainActivity extends AppCompatActivity {
     Fragment2 fragment2;
     Fragment3 fragment3;
     Fragment4 fragment4;
-
+    ViewPager viewpager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
+        ViewPager viewpager=(ViewPager)findViewById(R.id.viewpager);
         setSupportActionBar(toolbar);
         //액션바 기본 타이틀 보여지지 않게
         ActionBar actionBar = getSupportActionBar();
@@ -40,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
         tabs.addTab(tabs.newTab().setText("토론"));
         tabs.addTab(tabs.newTab().setText("패셔니스타"));
         tabs.addTab(tabs.newTab().setText("마이페이지"));
+        viewpager.setAdapter(new PagerAdapter(getSupportFragmentManager()));
+        viewpager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabs));
 
         //탭 선택리스너
         tabs.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener(){
@@ -59,7 +64,6 @@ public class MainActivity extends AppCompatActivity {
                 else if(position==3){
                     selected=fragment4;
                 }
-
                 getSupportFragmentManager().beginTransaction().replace(R.id.container, selected).commit();
             }
             //탭선택해제시
