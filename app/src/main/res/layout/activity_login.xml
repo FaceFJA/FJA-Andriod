@@ -159,6 +159,7 @@
                         android:layout_weight="1.3"
                         android:background="@drawable/bt_primary_shadow"
                         android:text="로그인"
+                        android:textColor="@android:color/white"
                         android:textSize="16dp" />
 
                     <View

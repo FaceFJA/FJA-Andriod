@@ -70,6 +70,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1.1"
+                android:textColor="@android:color/white"
                 android:text="로그인"
                 android:textSize="16dp"
                 android:background="@drawable/bt_primary_shadow"/>
