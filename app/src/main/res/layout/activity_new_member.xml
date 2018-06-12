@@ -63,6 +63,7 @@
                 android:weightSum="2">
 
                 <EditText
+                    android:id="@+id/edit_email"
                     android:inputType="textMultiLine|textNoSuggestions"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -95,6 +96,7 @@
                 android:layout_weight="0.05" />
 
             <EditText
+                android:id="@+id/edit_password"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="0.25"
@@ -112,6 +114,7 @@
                 android:layout_weight="0.05" />
 
             <EditText
+                android:id="@+id/edit_check_password"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="0.25"
@@ -136,6 +139,7 @@
                 android:weightSum="2">
 
                 <EditText
+                    android:id="@+id/edit_nickname"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1.5"
@@ -241,6 +245,7 @@
         android:layout_weight="1" />
 
     <Button
+        android:textColor="@android:color/white"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.9"
