@@ -17,7 +17,7 @@
            android:layout_width="match_parent"
            android:layout_height="0dp"
            android:layout_weight="0.05"/>
-       <LinearLayout
+       <RelativeLayout
            android:layout_width="match_parent"
            android:layout_height="0dp"
            android:layout_weight="0.1"
@@ -26,22 +26,25 @@
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:text="진행중"
-               android:textSize="14sp"
-               android:layout_marginLeft="10dp"
-               android:layout_gravity="center"/>
-       </LinearLayout>
+               android:textSize="17sp"
+               android:layout_marginLeft="10dp"/>
+           <Spinner
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentRight="true"
+               android:id="@+id/spinner"
+               android:entries="@array/number"
+               />
+       </RelativeLayout>
        <View
            android:layout_width="match_parent"
            android:layout_height="0dp"
            android:layout_weight="0.05"/>
-       <FrameLayout
-           android:layout_width="match_parent"
-           android:layout_height="0dp"
-           android:layout_weight="0.8">
-           <android.support.v7.widget.RecyclerView
-               android:layout_width="match_parent"
-               android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
-       </FrameLayout>
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="0.8">
+      </LinearLayout>
    </LinearLayout>
 </FrameLayout>
     <RelativeLayout
@@ -52,10 +55,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
         <android.support.design.widget.FloatingActionButton
+            android:background="@color/colorPrimary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_alignParentRight="true"
+            android:src="@drawable/ic_add_black_24dp"
             android:layout_margin="20dp"/>
     </RelativeLayout>
 </LinearLayout>

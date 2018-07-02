@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="number">
+        <item >결혼식</item>
+        <item>졸업식</item>
+        <item >데일리</item>
+        <item >면접</item>
+        <item >스트릿룩</item>
+        <item >상견례</item>
+    </string-array>
+</resources>
