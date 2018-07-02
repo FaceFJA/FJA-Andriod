@@ -1,7 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/black">
-
-</android.support.constraint.ConstraintLayout>
+    android:weightSum="2"
+    android:orientation="vertical">
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1">
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical"
+       android:weightSum="1">
+       <View
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:layout_weight="0.05"/>
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:layout_weight="0.1"
+           android:orientation="horizontal">
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="진행중"
+               android:textSize="14sp"
+               android:layout_marginLeft="10dp"
+               android:layout_gravity="center"/>
+       </LinearLayout>
+       <View
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:layout_weight="0.05"/>
+       <FrameLayout
+           android:layout_width="match_parent"
+           android:layout_height="0dp"
+           android:layout_weight="0.8">
+           <android.support.v7.widget.RecyclerView
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+       </FrameLayout>
+   </LinearLayout>
+</FrameLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <android.support.design.widget.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="20dp"/>
+    </RelativeLayout>
+</LinearLayout>
