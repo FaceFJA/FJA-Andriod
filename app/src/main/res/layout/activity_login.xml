@@ -97,11 +97,11 @@
                             android:textColor="@android:color/darker_gray" />
 
                         <EditText
-                            android:inputType="textMultiLine|textNoSuggestions"
                             android:layout_width="match_parent"
                             android:layout_height="0dp"
                             android:layout_weight="0.8"
                             android:hint="Name or Email"
+                            android:inputType="textMultiLine|textNoSuggestions"
                             android:textColor="@android:color/black"
                             android:textColorHint="@android:color/black"
                             android:textSize="12dp" />

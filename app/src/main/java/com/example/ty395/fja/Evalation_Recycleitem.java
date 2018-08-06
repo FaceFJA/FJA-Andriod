@@ -6,6 +6,9 @@ public class Evalation_Recycleitem {
     int image;
     String title;
     String subtitle;
+    public Evalation_Recycleitem(){
+
+    }
 
     public int getImage() {
         return image;
@@ -17,6 +20,18 @@ public class Evalation_Recycleitem {
 
     public String getSubtitle() {
         return subtitle;
+    }
+
+    public void setImage(int image) {
+        this.image = image;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setSubtitle(String subtitle) {
+        this.subtitle = subtitle;
     }
 
     public Evalation_Recycleitem(int image, String title, String subtitle) {
