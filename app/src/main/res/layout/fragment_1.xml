@@ -73,6 +73,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="진행완료"
+                android:textSize="17sp"
+                android:layout_marginLeft="10dp"
                 android:id="@+id/text"/>
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler"
@@ -82,14 +84,6 @@
             android:layout_marginTop="10dp"
             app:layoutManager="android.support.v7.widget.LinearLayoutManager"
             android:scrollbars="vertical"/>
-        <android.support.design.widget.FloatingActionButton
-            android:background="@color/colorPrimary"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:layout_margin="20dp"
-            android:src="@drawable/ic_add_black_24dp"/>
         </RelativeLayout>
     </FrameLayout>
 </LinearLayout>

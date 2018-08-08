@@ -36,12 +36,30 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 </android.support.design.widget.AppBarLayout>
-    <FrameLayout
+    <RelativeLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
-    </FrameLayout>
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/fab"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="#FF5050"
+            android:src="@drawable/ic_create_black_24dp"
+            android:visibility="invisible"/>
+        <android.support.design.widget.FloatingActionButton
+            android:backgroundTint="#FF5050"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="20dp"
+            android:id="@+id/fab"
+            android:src="@drawable/ic_add_black_24dp"/>
+    </RelativeLayout>
 
 </android.support.design.widget.CoordinatorLayout>
