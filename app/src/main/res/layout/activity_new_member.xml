@@ -29,7 +29,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1.37"
-        android:src="@drawable/ic_main" />
+        android:src="@drawable/icon_white" />
 
     <View
         android:layout_width="match_parent"
@@ -251,5 +251,6 @@
         android:layout_weight="0.9"
         android:background="#ff5050"
         android:text="회원가입"
+        android:id="@+id/bt_cerfication"
         android:textSize="16dp" />
 </LinearLayout>
