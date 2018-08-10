@@ -8,9 +8,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 public class Fragment4 extends Fragment {
     public Fragment4(){}
+    RelativeLayout layout_change_name;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,4 +22,5 @@ public class Fragment4 extends Fragment {
         LinearLayout layout =(LinearLayout) inflater.inflate(R.layout.fragment_4,container,false);
         return layout;
     }
+
 }
