@@ -18,6 +18,7 @@ import java.util.ArrayList;
 public class Fragment1 extends Fragment {
     RecyclerView recyclerView;
     RecycleAdapter recycleAdapter;
+    RecyclerView recycler_live;
     ArrayList<Evalation_Recycleitem> itemlist=new ArrayList<>();
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,7 @@ public class Fragment1 extends Fragment {
         ViewGroup layout=(ViewGroup)inflater.inflate(R.layout.fragment_1,container,false);
         recyclerView=(RecyclerView) layout.findViewById(R.id.recycler);
         recyclerView.setHasFixedSize(true);
+        recycler_live.setHasFixedSize(true);
         recycleAdapter=new RecycleAdapter(getActivity(),itemlist);
         recyclerView.setAdapter(recycleAdapter);
         itemlist.add(new Evalation_Recycleitem(R.drawable.person1,"오늘은 어떤 옷을 입고 나가는게 좋을까요?","오늘 친구들과 같이 나가기로 하였는데 어떤 옷을 입어야 할지 고민이에요!"));
