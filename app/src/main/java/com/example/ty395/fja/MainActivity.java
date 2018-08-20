@@ -1,5 +1,6 @@
 package com.example.ty395.fja;
 
+import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.design.widget.TabLayout;
@@ -98,11 +99,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (id) {
             case R.id.fab:
                 anim();
-                Toast.makeText(this, "Floating Action Button", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.fab1:
                 anim();
-                Toast.makeText(this, "Button1", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"글쓰기 화면으로 이동합니다",Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(getApplicationContext(),WriteActivity.class);
+                startActivity(intent);
                 break;
         }
     }
