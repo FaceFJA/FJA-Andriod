@@ -21,6 +21,7 @@ public class WriteActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),"메인화면으로 이동합니다",Toast.LENGTH_SHORT).show();
                 Intent intent= new Intent(getApplicationContext(),MainActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
     }
