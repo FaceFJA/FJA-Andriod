@@ -1,4 +1,4 @@
-package com.example.ty395.fja;
+package com.example.ty395.fja.Adapter;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -9,6 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.ty395.fja.Item.Evalation_Recycleitem;
+import com.example.ty395.fja.R;
 
 import java.util.ArrayList;
 

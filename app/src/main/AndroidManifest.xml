@@ -9,16 +9,16 @@
         android:roundIcon="@drawable/icon_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".StartActivity">
+        <activity android:name=".Activity.StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".MemberActivity" />
-        <activity android:name=".WriteActivity"/>
+        <activity android:name=".Activity.MainActivity" />
+        <activity android:name=".Activity.LoginActivity" />
+        <activity android:name=".Activity.MemberActivity" />
+        <activity android:name=".Activity.WriteActivity"/>
     </application>
 
 </manifest>

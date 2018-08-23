@@ -1,4 +1,4 @@
-package com.example.ty395.fja;
+package com.example.ty395.fja.Item;
 
 import android.support.v7.widget.RecyclerView;
 

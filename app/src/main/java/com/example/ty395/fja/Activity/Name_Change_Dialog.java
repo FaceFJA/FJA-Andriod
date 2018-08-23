@@ -1,18 +1,21 @@
-package com.example.ty395.fja;
+package com.example.ty395.fja.Activity;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.support.v4.app.FragmentManager;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.example.ty395.fja.R;
 
 public class Name_Change_Dialog {
     private Context context;
     public Name_Change_Dialog(Context context){
         this.context=context;
     }
-    void CallFunction(){
+    void CallFunction(FragmentManager fm){
         final Dialog dialog=new Dialog(context);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.dialog_name_change);
