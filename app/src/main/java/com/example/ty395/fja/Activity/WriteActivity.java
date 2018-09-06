@@ -27,5 +27,13 @@ public class WriteActivity extends AppCompatActivity {
                 finish();
             }
         });
+        TextView text_post=findViewById(R.id.text_post);
+        text_post.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PostDialog postDialog=new PostDialog(WriteActivity.this);
+                postDialog.CallFuntion();
+            }
+        });
     }
 }

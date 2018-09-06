@@ -19,7 +19,7 @@ import com.example.ty395.fja.Fragment.Fragment3;
 import com.example.ty395.fja.Fragment.Fragment4;
 import com.example.ty395.fja.R;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     Toolbar toolbar;
     Fragment1 fragment1;
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_bar_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         //액션바 기본 타이틀 보여지지 않게

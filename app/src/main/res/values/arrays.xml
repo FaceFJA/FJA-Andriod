@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="number">
+        <item>게시판 선택</item>
         <item >결혼식</item>
         <item>졸업식</item>
         <item >데일리</item>

@@ -1,18 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 <android.support.v7.widget.Toolbar
+    android:id="@+id/toolbar"
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
     android:background="@color/colorPrimary">
-    <TextView
-        android:id="@+id/text_back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="15sp"
-        android:text="뒤로"
-        android:textColor="@android:color/white"/>
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize">
+      <TextView
+          android:id="@+id/text_back"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="15sp"
+          android:text="뒤로"
+          android:textColor="@android:color/white"
+          android:layout_centerVertical="true"/>
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="글쓰기"
+          android:textColor="@android:color/white"
+          android:textSize="20sp"
+          android:layout_centerInParent="true"
+         />
+      <TextView
+          android:id="@+id/text_post"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="등록"
+          android:textSize="15sp"
+          android:textColor="@android:color/white"
+          android:layout_alignParentRight="true"
+          android:layout_centerVertical="true"
+          android:layout_marginRight="15dp"/>
+  </RelativeLayout>
 </android.support.v7.widget.Toolbar>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@id/toolbar"
+    android:weightSum="10"
+    android:orientation="vertical">
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:textSize="12sp"
+        android:entries="@array/number"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.02"
+        android:background="@color/background"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.8"
+        android:background="@android:color/white"
+        android:padding="10dp"
+        android:hint="제목을 입력하세요"
+        android:textSize="12sp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:background="@color/background"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7.4"
+        android:background="@android:color/white"
+        android:hint="내용"
+        android:gravity="top"
+        android:padding="10dp"
+        android:textSize="12sp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="1"></LinearLayout>
 </LinearLayout>
+</RelativeLayout>
