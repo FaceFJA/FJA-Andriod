@@ -166,10 +166,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if (id == R.id.nav_weather) {
             Toast.makeText(getApplicationContext(), "아이템 선택1", Toast.LENGTH_SHORT).show();
-        } else if (id == R.id.nav_location) {
-            Toast.makeText(getApplicationContext(), "아이템 선택1", Toast.LENGTH_SHORT).show();
-        } else if (id == R.id.nav_manual) {
-            Toast.makeText(getApplicationContext(), "아이템 선택1", Toast.LENGTH_SHORT).show();
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

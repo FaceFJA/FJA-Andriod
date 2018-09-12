@@ -1,6 +1,7 @@
 package com.example.ty395.fja.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.RecyclerView;
@@ -9,7 +10,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.ty395.fja.Activity.PostActivity;
 import com.example.ty395.fja.Item.Evalation_Recycleitem;
 import com.example.ty395.fja.R;
 
@@ -33,11 +36,18 @@ public class RecycleAdapter extends RecyclerView.Adapter<RecycleAdapter.ViewHold
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final ViewHolder holder, int position) {
         Evalation_Recycleitem evalation_recycleitem=evalation_recycleitems.get(position);
         holder.main_title.setText(evalation_recycleitem.getTitle());
         holder.sub_title.setText(evalation_recycleitem.getSubtitle());
         holder.image.setImageResource(evalation_recycleitem.getImage());
+        holder.image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(v.getContext(),PostActivity.class);
+                v.getContext().startActivity(intent);
+            }
+        });
     }
 
     @Override

@@ -15,7 +15,9 @@ public class Name_Change_Dialog {
     public Name_Change_Dialog(Context context){
         this.context=context;
     }
-    void CallFunction(FragmentManager fm){
+
+
+    public void CallFunction(){
         final Dialog dialog=new Dialog(context);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.dialog_name_change);

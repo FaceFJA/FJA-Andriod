@@ -118,6 +118,8 @@
                     android:layout_height="match_parent"
                     android:layout_weight="0.05"/>
                 <Button
+                    android:onClick="onClick"
+                    android:id="@+id/bt_name_check"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.45"

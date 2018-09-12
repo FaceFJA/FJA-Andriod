@@ -171,66 +171,50 @@
                 android:layout_height="0dp"
                 android:layout_weight="0.05" />
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="0.25"
-                android:orientation="horizontal"
-                android:weightSum="2">
+                android:layout_weight="0.25">
 
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
+                    android:id="@+id/gender"
+                    android:layout_width="78dp"
+                    android:layout_height="wrap_content"
                     android:background="@drawable/back_edit_new_member"
                     android:hint="성별"
                     android:padding="10dp"
                     android:textColorHint="@android:color/darker_gray"
                     android:textSize="12dp" />
-
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.05" />
-
                 <Button
-                    android:id="@+id/man"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.45"
+                    android:id="@+id/bt_man"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
                     android:background="@drawable/back_choose_gender"
                     android:text="남"
-                    android:textSize="12dp" />
-
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.05" />
-
+                    android:layout_toRightOf="@id/gender"
+                    android:layout_marginLeft="10dp"/>
                 <Button
-                    android:id="@+id/woman"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.45"
+                    android:id="@+id/bt_woman"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
                     android:background="@drawable/back_choose_gender"
                     android:text="여"
-                    android:textSize="12dp" />
-
+                    android:layout_toRightOf="@id/bt_man"
+                    android:layout_marginLeft="10dp"/>
+                <Button
+                    android:id="@+id/bt_another"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/back_choose_gender"
+                    android:text="기타"
+                    android:layout_toRightOf="@id/bt_woman"
+                    android:layout_marginLeft="10dp"/>
                 <View
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="0.05" />
 
-                <Button
-                    android:id="@+id/another"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.45"
-                    android:background="@drawable/back_choose_gender"
-                    android:text="기타"
-                    android:textSize="12dp"
-                    android:button="@null"/>
-            </LinearLayout>
+            </RelativeLayout>
         </LinearLayout>
 
         <View

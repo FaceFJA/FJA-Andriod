@@ -12,13 +12,16 @@
         <activity android:name=".Activity.StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity.MainActivity" />
         <activity android:name=".Activity.LoginActivity" />
+        <activity android:name=".Activity.MainActivity" />
         <activity android:name=".Activity.MemberActivity" />
-        <activity android:name=".Activity.WriteActivity"/>
+        <activity android:name=".Activity.WriteActivity" />
+        <activity android:name=".Activity.NameChange"/>
+        <activity android:name=".Activity.PostActivity"/>
     </application>
 
 </manifest>
