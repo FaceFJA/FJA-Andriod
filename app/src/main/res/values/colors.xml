@@ -7,4 +7,6 @@
     <color name="edit">#2a000000</color>
     <color name="background">#f4f4f4</color>
     <color name="primary_light">#ff8080</color>
+    <color name="none">#00ffffff</color>
+    <color name="back">#c5757575</color>
 </resources>
