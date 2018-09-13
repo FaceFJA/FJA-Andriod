@@ -24,7 +24,7 @@ public class Fragment2 extends Fragment {
     }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInsrtanceState){
-        ViewGroup layout=(ViewGroup)inflater.inflate(R.layout.fragment_1,container,false);
+        ViewGroup layout=(ViewGroup)inflater.inflate(R.layout.fragment_2,container,false);
         recyclerView=(RecyclerView) layout.findViewById(R.id.recycler);
         recyclerView.setHasFixedSize(true);
         recycleAdapter=new RecycleAdapter(getActivity(),itemlist);

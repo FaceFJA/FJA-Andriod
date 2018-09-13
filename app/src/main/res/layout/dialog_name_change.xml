@@ -34,6 +34,8 @@
            android:weightSum="3"
            android:orientation="vertical">
            <EditText
+               android:id="@+id/edit_name"
+               android:inputType="textNoSuggestions"
                android:layout_width="match_parent"
                android:layout_height="0dp"
                android:layout_weight="1.4"
@@ -50,22 +52,15 @@
                android:layout_weight="1"
                android:orientation="horizontal"
                android:weightSum="1">
-               <View
-                   android:layout_width="0dp"
-                   android:layout_height="match_parent"
-                   android:layout_weight="0.05"/>
+
                <Button
                    android:id="@+id/bt_okay"
-                   android:layout_width="0dp"
+                   android:layout_width="match_parent"
                    android:layout_height="match_parent"
                    android:layout_weight="0.9"
                    android:text="완료!"
                    android:textSize="14sp"
                    android:background="@drawable/back_dialog"/>
-               <View
-                   android:layout_width="0dp"
-                   android:layout_height="match_parent"
-                   android:layout_weight="0.05"/>
            </LinearLayout>
 
        </LinearLayout>

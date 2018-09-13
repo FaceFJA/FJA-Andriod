@@ -54,7 +54,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         getSupportActionBar().setDisplayShowTitleEnabled(false);
-
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         //Fragment : 탭 클릭시 보여줄 화면들
@@ -165,7 +164,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int id = item.getItemId();
 
         if (id == R.id.nav_weather) {
-            Toast.makeText(getApplicationContext(), "아이템 선택1", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "환경설정", Toast.LENGTH_SHORT).show();
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

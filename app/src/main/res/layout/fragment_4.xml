@@ -23,7 +23,7 @@
             android:layout_height="match_parent"
             android:layout_weight="0.8"
             android:src="@drawable/ic_baseline_person_24px"
-            android:padding="10dp"
+            android:padding="12dp"
             android:background="@drawable/ic_round"/>
         <View
             android:layout_width="0dp"
@@ -104,6 +104,7 @@
                     android:layout_weight="1.48"
                     android:gravity="right">
                     <TextView
+                        android:id="@+id/text_nickname"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="12sp"

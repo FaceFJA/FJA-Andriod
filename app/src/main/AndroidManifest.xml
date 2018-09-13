@@ -20,7 +20,6 @@
         <activity android:name=".Activity.MainActivity" />
         <activity android:name=".Activity.MemberActivity" />
         <activity android:name=".Activity.WriteActivity" />
-        <activity android:name=".Activity.NameChange"/>
         <activity android:name=".Activity.PostActivity"/>
     </application>
 
