@@ -1,6 +1,7 @@
 package com.example.ty395.fja.Fragment;
 
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.support.annotation.Nullable;
 import android.support.constraint.ConstraintLayout;
@@ -10,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.CalendarView;
 import android.widget.LinearLayout;
 
+import com.example.ty395.fja.Activity.Choose_Date_Dialog;
 import com.example.ty395.fja.R;
 
 public class Fragment3 extends Fragment {
@@ -20,8 +22,9 @@ public class Fragment3 extends Fragment {
         super.onCreate(savedInstanceState);
     }
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInsrtanceState){
-        LinearLayout layout =(LinearLayout) inflater.inflate(R.layout.fragment_3,container,false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInsrtanceState) {
+        LinearLayout layout = (LinearLayout) inflater.inflate(R.layout.fragment_3, container, false);
+        CalendarView calendarView = layout.findViewById(R.id.calendar);
         return layout;
     }
 }

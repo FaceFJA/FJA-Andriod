@@ -14,7 +14,7 @@ public class SettingDialog {
     private Context context;
     public SettingDialog(Context context){this.context=context;}
     void Date(){
-        final Dialog dialog=new Dialog(context, android.R.style.Theme_NoTitleBar);
+        final Dialog dialog=new Dialog(context);
        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.dialog_setting);
         dialog.show();

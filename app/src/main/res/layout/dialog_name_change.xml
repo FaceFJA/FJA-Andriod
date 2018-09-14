@@ -41,6 +41,8 @@
                android:layout_weight="1.4"
                android:paddingLeft="5dp"
                android:hint="원하는 이름을 입력해주세요"
+               android:singleLine="true"
+               android:lines="1"
                android:textSize="14sp"/>
            <View
                android:layout_width="match_parent"

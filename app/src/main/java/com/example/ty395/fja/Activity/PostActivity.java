@@ -1,5 +1,6 @@
 package com.example.ty395.fja.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -7,8 +8,10 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.SlidingDrawer;
+import android.widget.Toast;
 
 import com.example.ty395.fja.Adapter.CommentAdapter;
 import com.example.ty395.fja.Adapter.RecycleAdapter;
@@ -38,11 +41,19 @@ public class PostActivity extends AppCompatActivity {
         comment_items.add(new Comment_Item("패션왕"));
         comment_items.add(new Comment_Item("패션왕"));
         comment_items.add(new Comment_Item("패션왕"));
-        comment_items.add(new Comment_Item("패션왕")); comment_items.add(new Comment_Item("패션왕"));
         comment_items.add(new Comment_Item("패션왕"));
         comment_items.add(new Comment_Item("패션왕"));
         comment_items.add(new Comment_Item("패션왕"));
-
-
+        comment_items.add(new Comment_Item("패션왕"));
+        comment_items.add(new Comment_Item("패션왕"));
+        final ImageView ic_back=findViewById(R.id.ic_back);
+        ic_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 }

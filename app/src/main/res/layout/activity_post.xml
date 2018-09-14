@@ -8,6 +8,7 @@
     android:layout_height="wrap_content"
     android:background="@color/colorPrimary">
     <ImageView
+        android:id="@+id/ic_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_baseline_arrow_back_24px"/>
@@ -108,15 +109,15 @@
                android:orientation="vertical"
                android:weightSum="3">
                <TextView
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:layout_weight="1.8"
+                   android:layout_width="match_parent"
+                   android:layout_height="0dp"
+                   android:layout_weight="2"
                    android:textSize="12sp"
-                   android:text="제가 이번에 옷을 샀는데 어떤 스타일로 입으면 좋을까 고민을 굉장히 많이....."/>
+                   android:text="지금 상당히 배가 고픈데 밥이 먹고 싶습니다. 사실 배고픈건 밥을 먹기 위해 배고픔이라는 상태를 만들어 내는 그런 것이라고 합니다. 상당히 배가 고프기 때문에 지금 뭘 쓰는지도 모르겠지만 일단 배가 고픈건 맞다고 생각합니다. 한 시간 후면 밥 먹으러 가는데 오늘 저녁은 맛이 있을 것이라고 생각됩니다. 점심에 참치 샌드위치도 두 개 밖에 못먹어서 많이 슬픈데 왜 두개 밖에 안준건지 하나도 모르겠구요. 일단 저녁에 돈까스나온다는데 개 맛있겠다"/>
                <ImageView
                    android:layout_width="match_parent"
                    android:layout_height="0dp"
-                   android:layout_weight="1.2"
+                   android:layout_weight="1"
                    android:src="@drawable/person1"/>
            </LinearLayout>
        </LinearLayout>
@@ -124,9 +125,10 @@
     <SlidingDrawer
         android:id="@+id/slide"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="450dp"
         android:allowSingleTap="true"
         android:animateOnClick="true"
+        android:layout_alignParentBottom="true"
         android:bottomOffset="5dp"
         android:content="@+id/content"
         android:handle="@+id/handle"
