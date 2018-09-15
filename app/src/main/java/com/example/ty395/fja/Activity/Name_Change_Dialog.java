@@ -31,9 +31,9 @@ public class Name_Change_Dialog {
             @Override
             public void onClick(View v) {
                 Toast.makeText(context,"이름 변경이 완료되었습니다",Toast.LENGTH_SHORT).show();
-                Intent intent= new Intent(context,MainActivity.class);
+                Intent intent= new Intent();
                 intent.putExtra("name",edit_name.getText().toString());
-                context.startActivity(intent);
+                dialog.dismiss();
             }
         });
     }

@@ -24,6 +24,7 @@ import com.example.ty395.fja.Fragment.Fragment1;
 import com.example.ty395.fja.Fragment.Fragment2;
 import com.example.ty395.fja.Fragment.Fragment3;
 import com.example.ty395.fja.Fragment.Fragment4;
+import com.example.ty395.fja.Item.BackPressCloseHandler;
 import com.example.ty395.fja.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, NavigationView.OnNavigationItemSelectedListener {
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Animation fab_open, fab_close;
     private Boolean isFabOpen = false;
     private FloatingActionButton fab, fab1;
-
+    BackPressCloseHandler backPressCloseHandler;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,6 +57,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        backPressCloseHandler = new BackPressCloseHandler(this);
         //Fragment : 탭 클릭시 보여줄 화면들
         fragment1 = new Fragment1();
         fragment2 = new Fragment2();
@@ -148,7 +150,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            backPressCloseHandler.onBackPressed();
         }
     }
 
@@ -165,11 +167,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if (id == R.id.nav_weather) {
             Toast.makeText(getApplicationContext(), "환경설정", Toast.LENGTH_SHORT).show();
-            SettingDialog settingDialog=new SettingDialog(MainActivity.this);
+            SettingDialog settingDialog = new SettingDialog(MainActivity.this);
             settingDialog.Date();
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
 }

@@ -25,6 +25,13 @@ public class Fragment3 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInsrtanceState) {
         LinearLayout layout = (LinearLayout) inflater.inflate(R.layout.fragment_3, container, false);
         CalendarView calendarView = layout.findViewById(R.id.calendar);
+        calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+            @Override
+            public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
+                Choose_Date_Dialog choose_date_dialog=new Choose_Date_Dialog(getActivity());
+                choose_date_dialog.Date();
+            }
+        });
         return layout;
     }
 }

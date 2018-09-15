@@ -25,9 +25,9 @@ public class Fragment4 extends Fragment implements View.OnClickListener{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInsrtanceState){
         LinearLayout layout =(LinearLayout) inflater.inflate(R.layout.fragment_4,container,false);
-        Button bt_name_check=layout.findViewById(R.id.bt_name_check);
+        LinearLayout layout_nickname=layout.findViewById(R.id.layout_nickname);
+        layout_nickname.setOnClickListener(this);
         TextView text_nickname=layout.findViewById(R.id.text_nickname);
-        bt_name_check.setOnClickListener(this);
         return layout;
     }
 
