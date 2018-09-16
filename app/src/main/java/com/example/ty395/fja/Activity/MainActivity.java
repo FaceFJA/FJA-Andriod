@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
         //TabLayout에 Tab 3개 추가
-        TabLayout tabs = (TabLayout) findViewById(R.id.tabs);
+        final TabLayout tabs = (TabLayout) findViewById(R.id.tabs);
         tabs.addTab(tabs.newTab().setText("평가"));
         tabs.addTab(tabs.newTab().setText("토론"));
         tabs.addTab(tabs.newTab().setText("패셔니스타"));

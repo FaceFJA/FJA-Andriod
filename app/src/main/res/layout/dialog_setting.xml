@@ -18,6 +18,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/ic_alarm"
         android:layout_toLeftOf="@id/text_nochoose"
+        android:visibility="visible"
         android:layout_centerInParent="true"/>
     <TextView
         android:id="@+id/text_choose"

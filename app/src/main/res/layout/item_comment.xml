@@ -47,11 +47,11 @@
             android:textColor="@color/text"
             android:gravity="center_vertical"/>
         <TextView
+            android:id="@+id/text_recommend"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.25"
-            android:textSize="8sp"
-            android:text="잘 어울리네요!"/>
+            android:textSize="8sp" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="0dp"

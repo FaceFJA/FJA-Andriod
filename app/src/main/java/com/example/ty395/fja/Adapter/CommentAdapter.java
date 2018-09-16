@@ -31,6 +31,7 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.ViewHold
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Comment_Item commentItem=comment_items.get(position);
         holder.text_nickname.setText(commentItem.getText_nickname());
+        holder.text_recommend.setText(commentItem.getText_recommend());
     }
 
     @Override
@@ -40,9 +41,11 @@ public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.ViewHold
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView text_nickname;
+        TextView text_recommend;
         public ViewHolder(View view) {
             super(view);
             text_nickname=view.findViewById(R.id.text_nick);
+            text_recommend=view.findViewById(R.id.text_recommend);
         }
     }
 }

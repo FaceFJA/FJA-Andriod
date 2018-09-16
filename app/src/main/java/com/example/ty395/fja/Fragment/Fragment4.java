@@ -18,6 +18,7 @@ import java.net.URISyntaxException;
 public class Fragment4 extends Fragment implements View.OnClickListener{
     public Fragment4(){}
     String name;
+    TextView text_nickname;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,7 +28,6 @@ public class Fragment4 extends Fragment implements View.OnClickListener{
         LinearLayout layout =(LinearLayout) inflater.inflate(R.layout.fragment_4,container,false);
         LinearLayout layout_nickname=layout.findViewById(R.id.layout_nickname);
         layout_nickname.setOnClickListener(this);
-        TextView text_nickname=layout.findViewById(R.id.text_nickname);
         return layout;
     }
 

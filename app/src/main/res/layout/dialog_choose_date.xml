@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:text="이달의 패셔니스타"
+        android:text="오늘의 패셔니스타"
         android:textColor="@android:color/white"
         android:textSize="14sp"
         android:gravity="center"

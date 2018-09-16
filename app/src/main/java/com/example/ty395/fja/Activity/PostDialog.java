@@ -25,7 +25,8 @@ public class PostDialog  {
             @Override
             public void onClick(View v) {
                 Toast.makeText(context.getApplicationContext(),"게시글 등록이 완료되었습니다",Toast.LENGTH_SHORT).show();
-                dialog.dismiss();
+                Intent intent=new Intent(context,MainActivity.class);
+                context.startActivity(intent);
             }
         });
     }

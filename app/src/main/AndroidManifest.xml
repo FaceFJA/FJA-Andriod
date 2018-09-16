@@ -22,7 +22,6 @@
         <activity android:name=".Activity.MemberActivity" />
         <activity android:name=".Activity.WriteActivity" />
         <activity android:name=".Activity.PostActivity" />
-        <activity android:name=".Activity.MypageActivity"/>
     </application>
 
 </manifest>

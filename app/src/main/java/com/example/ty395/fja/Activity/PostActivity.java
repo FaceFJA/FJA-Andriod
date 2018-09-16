@@ -32,20 +32,18 @@ public class PostActivity extends AppCompatActivity {
         CommentAdapter commentAdapter= new CommentAdapter(comment_items);
         recyclerView.setAdapter(commentAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        comment_items.add(new Comment_Item("패션왕"));
-        comment_items.add(new Comment_Item("패션왕"));
-        comment_items.add(new Comment_Item("패션왕"));
-        comment_items.add(new Comment_Item("패션왕"));
-        comment_items.add(new Comment_Item("패션왕"));
-        comment_items.add(new Comment_Item("패션왕"));
-        comment_items.add(new Comment_Item("패션왕"));
-        comment_items.add(new Comment_Item("패션왕"));
-        comment_items.add(new Comment_Item("패션왕"));
-        comment_items.add(new Comment_Item("패션왕"));
-        comment_items.add(new Comment_Item("패션왕"));
-        comment_items.add(new Comment_Item("패션왕"));
-        comment_items.add(new Comment_Item("패션왕"));
-        comment_items.add(new Comment_Item("패션왕"));
+        comment_items.add(new Comment_Item("패션왕","잘 어울리네요!"));
+        comment_items.add(new Comment_Item("패션피플","다음엔 다른 스타일로 도전해보심이...."));
+        comment_items.add(new Comment_Item("패션찐따","저는 저런 스타일이 좋아요!"));
+        comment_items.add(new Comment_Item("패.패들ㅇr","무난하게 소화하시네요"));
+        comment_items.add(new Comment_Item("패션왕","잘 어울리네요!"));
+        comment_items.add(new Comment_Item("패션피플","다음엔 다른 스타일로 도전해보심이...."));
+        comment_items.add(new Comment_Item("패션찐따","저는 저런 스타일이 좋아요!"));
+        comment_items.add(new Comment_Item("패.패들ㅇr","무난하게 소화하시네요"));
+        comment_items.add(new Comment_Item("패션왕","잘 어울리네요!"));
+        comment_items.add(new Comment_Item("패션피플","다음엔 다른 스타일로 도전해보심이...."));
+        comment_items.add(new Comment_Item("패션찐따","저는 저런 스타일이 좋아요!"));
+        comment_items.add(new Comment_Item("패.패들ㅇr","무난하게 소화하시네요"));
         final ImageView ic_back=findViewById(R.id.ic_back);
         ic_back.setOnClickListener(new View.OnClickListener() {
             @Override
