@@ -61,6 +61,7 @@ public class MemberActivity extends AppCompatActivity{
                 woman.setVisibility(View.VISIBLE);
                 another.setVisibility(View.VISIBLE);
                 choose_woman.setVisibility(View.INVISIBLE);
+                Toast.makeText(getApplicationContext(),"남자",Toast.LENGTH_SHORT);
             }
         });
         woman.setOnClickListener(new View.OnClickListener() {
@@ -72,6 +73,7 @@ public class MemberActivity extends AppCompatActivity{
                 choose_another.setVisibility(View.INVISIBLE);
                 man.setVisibility(View.VISIBLE);
                 another.setVisibility(View.VISIBLE);
+                Toast.makeText(getApplicationContext(),"여자",Toast.LENGTH_SHORT);
             }
         });
         another.setOnClickListener(new View.OnClickListener() {
@@ -83,6 +85,7 @@ public class MemberActivity extends AppCompatActivity{
                 another.setVisibility(View.INVISIBLE);
                 man.setVisibility(View.VISIBLE);
                 woman.setVisibility(View.VISIBLE);
+                Toast.makeText(getApplicationContext(),"기타",Toast.LENGTH_SHORT);
             }
         });
     }
