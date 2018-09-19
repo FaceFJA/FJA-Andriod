@@ -1,5 +1,7 @@
 package com.example.ty395.fja.Connecter;
 
-public interface API {
+import retrofit2.http.POST;
 
+public interface API {
+  
 }

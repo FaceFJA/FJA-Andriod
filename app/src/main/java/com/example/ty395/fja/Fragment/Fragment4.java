@@ -29,9 +29,6 @@ public class Fragment4 extends Fragment implements View.OnClickListener{
         LinearLayout layout_nickname=layout.findViewById(R.id.layout_nickname);
         layout_nickname.setOnClickListener(this);
         text_nickname=layout.findViewById(R.id.text_nickname);
-        Bundle bundle=getArguments();
-        String name=bundle.getString("nickname");
-        text_nickname.setText(name);
         return layout;
     }
 

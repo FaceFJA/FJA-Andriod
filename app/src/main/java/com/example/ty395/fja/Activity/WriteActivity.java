@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,6 +17,8 @@ import com.example.ty395.fja.R;
 
 public class WriteActivity extends AppCompatActivity {
     TextView text_back;
+    private int REQ_PICK_CODE=100;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,15 +44,14 @@ public class WriteActivity extends AppCompatActivity {
         final Spinner spinner = (Spinner) findViewById(R.id.spinner);
         ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.number, android.R.layout.simple_spinner_item);
         spinner.setAdapter(adapter);
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        ImageView ic_camera=findViewById(R.id.ic_camera);
+        ic_camera.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getApplicationContext(),"선택된 아이템 : "+spinner.getItemAtPosition(position), Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
+            public void onClick(View v) {
+                Intent pickerIntent = new Intent(Intent.ACTION_PICK);
+                pickerIntent.setType(android.provider.MediaStore.Images.Media.CONTENT_TYPE);
+                pickerIntent.setData(android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                startActivityForResult(pickerIntent, REQ_PICK_CODE);
             }
         });
     }

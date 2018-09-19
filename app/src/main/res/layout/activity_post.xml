@@ -95,7 +95,7 @@
        <LinearLayout
            android:layout_width="match_parent"
            android:layout_height="0dp"
-           android:layout_weight="7"
+           android:layout_weight="6"
            android:weightSum="3"
            android:orientation="horizontal">
            <View
@@ -133,15 +133,39 @@
         android:content="@+id/content"
         android:handle="@+id/handle"
         android:orientation="vertical"
-        android:topOffset="60dp"
-        >
-        <ImageView
+        android:topOffset="60dp">
+        <LinearLayout
             android:id="@+id/handle"
-            android:src="@drawable/ic_yield_sign"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingBottom="10dp"
-            />
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#f5f5f5"
+            android:orientation="vertical"
+            android:weightSum="1">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.05"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.4"
+                android:weightSum="1"
+                android:gravity="center">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_person_24px"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.05"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.009"
+                android:background="@color/back"/>
+        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -157,17 +181,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1.5"
-                android:weightSum="3">
-                <View
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.2"/>
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2.8"
-                    android:orientation="vertical"
-                    android:weightSum="3">
+                android:weightSum="3"
+                android:layout_marginLeft="8dp"
+                android:orientation="vertical">
                     <View
                         android:layout_width="match_parent"
                         android:layout_height="0dp"
@@ -230,7 +246,6 @@
                             android:layout_toRightOf="@id/news"
                             android:layout_marginLeft="5dp"/>
                     </RelativeLayout>
-                </LinearLayout>
             </LinearLayout>
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/recycler"

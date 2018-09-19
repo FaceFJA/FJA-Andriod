@@ -33,14 +33,8 @@ public class Name_Change_Dialog {
             @Override
             public void onClick(View v) {
                 Toast.makeText(context,"이름 변경이 완료되었습니다",Toast.LENGTH_SHORT).show();
-               post();
+                dialog.dismiss();
             }
         });
-    }
-    public void post(){
-        Fragment4 fragment4=new Fragment4();
-        Bundle bundle=new Bundle();
-        bundle.putString("nickname",edit_name.getText().toString());
-        fragment4.setArguments(bundle);
     }
 }
