@@ -3,6 +3,7 @@ package com.example.ty395.fja.Connecter;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
 import retrofit2.http.POST;
 
 interface API {
@@ -26,6 +27,9 @@ interface API {
     @POST("/auth/pw")
     @FormUrlEncoded
     Call<RetrofitRepo> post_findpw(@Field("id") String id,@Field("pw") String pw);
+
     //FasioniStar
+    @GET("/fashionista/:date")
+    Call<RetrofitRepo> get_fasionista(@Field("post_id") Integer post_id,@Field("title")String title,@Field("star")String star);
     //Mypage
 }

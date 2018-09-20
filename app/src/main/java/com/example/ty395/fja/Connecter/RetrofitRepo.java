@@ -1,8 +1,8 @@
 package com.example.ty395.fja.Connecter;
 
 public class RetrofitRepo {
-    String id,pw,name,email;
-    int old,gender;
+    String id,pw,name,email,title;
+    int old,gender,post_id,star;
 
     public String getId() {
         return id;
@@ -50,5 +50,29 @@ public class RetrofitRepo {
 
     public void setGender(int gender) {
         this.gender = gender;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public int getPost_id() {
+        return post_id;
+    }
+
+    public void setPost_id(int post_id) {
+        this.post_id = post_id;
+    }
+
+    public int getStar() {
+        return star;
+    }
+
+    public void setStar(int star) {
+        this.star = star;
     }
 }

@@ -27,14 +27,28 @@
         <ImageView
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="0.6"
             android:src="@drawable/ic_girl"
             android:padding="5dp"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"/>
         <ImageView
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="0.6"
             android:src="@drawable/ic_man"
+            android:padding="5dp"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1"/>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.6"
+            android:src="@drawable/ic_boy"
             android:padding="5dp"/>
     </LinearLayout>
     <LinearLayout
@@ -43,19 +57,39 @@
         android:layout_weight="0.5"
         android:weightSum="2"
         android:orientation="horizontal">
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.05"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="스트릿 부문: 김영우"
+            android:layout_weight="0.55"
+            android:text="1위: 김영우"
             android:textSize="10sp"
             android:gravity="center"
             android:textColor="@android:color/black"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.15"/>
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="면접 부문: 김지하"
+            android:layout_weight="0.55"
+            android:text="2위: 김민승"
+            android:textSize="10sp"
+            android:gravity="center"
+            android:textColor="@android:color/black"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.15"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.55"
+            android:text="3위 정민수"
             android:textSize="10sp"
             android:gravity="center"
             android:textColor="@android:color/black"/>
