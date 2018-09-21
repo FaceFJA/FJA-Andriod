@@ -1,8 +1,32 @@
 package com.example.ty395.fja.Connecter;
 
 public class RetrofitRepo {
-    String id,pw,name,email,title;
+    String id,pw,name,email,title,category,text,image;
     int old,gender,post_id,star;
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
 
     public String getId() {
         return id;
