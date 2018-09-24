@@ -1,8 +1,40 @@
 package com.example.ty395.fja.Connecter;
 
 public class RetrofitRepo {
-    String id,pw,name,email,title,category,text,image;
-    int old,gender,post_id,star;
+    String id,pw,name,email,title,category,text,image,comments,comment_id;
+    int old,gender,post_id,star,like,unlike;
+
+    public int getLike() {
+        return like;
+    }
+
+    public void setLike(int like) {
+        this.like = like;
+    }
+
+    public int getUnlike() {
+        return unlike;
+    }
+
+    public void setUnlike(int unlike) {
+        this.unlike = unlike;
+    }
+
+    public String getComment_id() {
+        return comment_id;
+    }
+
+    public void setComment_id(String comment_id) {
+        this.comment_id = comment_id;
+    }
+
+    public String getComments() {
+        return comments;
+    }
+
+    public void setComments(String comments) {
+        this.comments = comments;
+    }
 
     public String getText() {
         return text;

@@ -15,7 +15,7 @@ public class RetrofitService {
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
         OkHttpClient client = new OkHttpClient.Builder().addInterceptor(interceptor).build();
         retrofit = new Retrofit.Builder()
-                .baseUrl("url will be here")
+                .baseUrl("http://52.12.67.168:9000/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build();
