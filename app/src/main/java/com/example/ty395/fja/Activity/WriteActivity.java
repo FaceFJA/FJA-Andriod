@@ -54,5 +54,13 @@ public class WriteActivity extends AppCompatActivity {
                 startActivityForResult(pickerIntent, REQ_PICK_CODE);
             }
         });
+        ImageView ic_link=findViewById(R.id.ic_link);
+        ic_link.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LinkDialog linkDialog=new LinkDialog(WriteActivity.this);
+                linkDialog.Date();
+            }
+        });
     }
 }
