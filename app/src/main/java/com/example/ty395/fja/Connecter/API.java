@@ -2,6 +2,8 @@ package com.example.ty395.fja.Connecter;
 
 import com.google.gson.JsonObject;
 
+import java.lang.invoke.VolatileCallSite;
+
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.Field;
@@ -19,6 +21,9 @@ public interface API {
 
     @POST("login")
     Call<Void> post_login(@Body JsonObject jsonObject);
+
+    @GET("fashionista/:date")
+    Call<Void> get_fashionista(@Body JsonObject jsonObject);
 //    @POST("join/email")
 //    @FormUrlEncoded
 //    Call<RetrofitRepo> post_email(@Field("email") String email);

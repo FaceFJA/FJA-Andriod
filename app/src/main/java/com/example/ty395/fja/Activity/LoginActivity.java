@@ -51,13 +51,16 @@ String getPassword;
         JsonObject jsonObject=new JsonObject();
         jsonObject.addProperty("id",getEmail);
         jsonObject.addProperty("pw",getPassword);
-        Call<Void> call= retrofit.post_member(jsonObject);
+        Call<Void> call= retrofit.post_login(jsonObject);
         call.enqueue(new Callback<Void>() {
             @Override
             public void onResponse(Call<Void> call, Response<Void> response) {
+                Void repo = response.body();
+                if(response.code()==200) {
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
                 finish();
+                }
             }
 
             @Override
