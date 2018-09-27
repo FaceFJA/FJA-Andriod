@@ -97,13 +97,13 @@
                 android:layout_weight="0.05" />
 
             <EditText
-                android:id="@+id/edit_password"
+                android:inputType="textNoSuggestions"
+                android:id="@+id/edit_name"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="0.25"
                 android:background="@drawable/back_edit_new_member"
-                android:hint="비밀번호"
-                android:inputType="textPassword"
+                android:hint="이름"
                 android:padding="10dp"
                 android:textColor="@android:color/black"
                 android:textColorHint="@color/edit"
@@ -115,12 +115,12 @@
                 android:layout_weight="0.05" />
 
             <EditText
-                android:id="@+id/edit_check_password"
+                android:id="@+id/edit_password"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="0.25"
                 android:background="@drawable/back_edit_new_member"
-                android:hint="비밀번호 확인"
+                android:hint="비밀번호"
                 android:inputType="textPassword"
                 android:padding="10dp"
                 android:textColor="@android:color/black"
@@ -140,12 +140,12 @@
                 android:weightSum="2">
 
                 <EditText
-                    android:id="@+id/edit_nickname"
+                    android:id="@+id/edit_id"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1.5"
                     android:background="@drawable/back_edit_new_member"
-                    android:hint="닉네임"
+                    android:hint="아이디"
                     android:padding="10dp"
                     android:textColor="@android:color/black"
                     android:textColorHint="@color/edit"
