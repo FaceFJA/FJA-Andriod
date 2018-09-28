@@ -114,9 +114,12 @@ public class MemberActivity extends AppCompatActivity {
         call.enqueue(new Callback<Void>() {
             @Override
             public void onResponse(Call<Void> call, Response<Void> response) {
-                    Toast.makeText(getApplicationContext(), "회원가입이 완료되었습니다.", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(getApplicationContext(), StartActivity.class);
-                    startActivity(intent);
+                    Void repo = response.body();
+                    if (response.code()==200) {
+                        Toast.makeText(getApplicationContext(), "회원가입이 완료되었습니다.", Toast.LENGTH_SHORT).show();
+                        Intent intent = new Intent(getApplicationContext(), StartActivity.class);
+                        startActivity(intent);
+                    }
             }
 
             @Override

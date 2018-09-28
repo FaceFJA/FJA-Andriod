@@ -24,6 +24,9 @@ public interface API {
 
     @GET("fashionista/:date")
     Call<Void> get_fashionista(@Body JsonObject jsonObject);
+
+    @POST("commentUpload/postId")
+    Call<Void> post_comment(@Body JsonObject jsonObject);
 //    @POST("join/email")
 //    @FormUrlEncoded
 //    Call<RetrofitRepo> post_email(@Field("email") String email);

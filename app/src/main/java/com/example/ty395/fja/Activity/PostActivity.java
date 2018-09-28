@@ -28,7 +28,7 @@ public class PostActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_post);
         recyclerView=findViewById(R.id.recycler);
-        ArrayList<Comment_Item>comment_items=new ArrayList<>();
+        final ArrayList<Comment_Item>comment_items=new ArrayList<>();
         CommentAdapter commentAdapter= new CommentAdapter(comment_items);
         recyclerView.setAdapter(commentAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
@@ -51,6 +51,14 @@ public class PostActivity extends AppCompatActivity {
                 Intent intent= new Intent(getApplicationContext(),MainActivity.class);
                 startActivity(intent);
                 finish();
+            }
+        });
+        ImageView ic_comment=findViewById(R.id.ic_comment);
+        ic_comment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CommentDialog commentDialog= new CommentDialog(PostActivity.this);
+                commentDialog.Date();
             }
         });
     }

@@ -33,9 +33,9 @@ public class Fragment1 extends Fragment {
         recycleAdapter=new RecycleAdapter(getActivity(),itemlist);
         recyclerView.setAdapter(recycleAdapter);
         itemlist.add(new Evalation_Recycleitem(R.drawable.person1,"오늘은 어떤 옷을 입고 나가는게 좋을까요?","오늘 친구들과 같이 나가기로 하였는데 어떤 옷을 입어야 할지 고민이에요!"));
-        itemlist.add(new Evalation_Recycleitem(R.drawable.person1,"오늘은 어떤 옷을 입고 나가는게 좋을까요?","오늘 친구들과 같이 나가기로 하였는데 어떤 옷을 입어야 할지 고민이에요!"));
-        itemlist.add(new Evalation_Recycleitem(R.drawable.person1,"오늘은 어떤 옷을 입고 나가는게 좋을까요?","오늘 친구들과 같이 나가기로 하였는데 어떤 옷을 입어야 할지 고민이에요!"));
-        itemlist.add(new Evalation_Recycleitem(R.drawable.person1,"오늘은 어떤 옷을 입고 나가는게 좋을까요?","오늘 친구들과 같이 나가기로 하였는데 어떤 옷을 입어야 할지 고민이에요!"));
+        itemlist.add(new Evalation_Recycleitem(R.drawable.person2,"제 옷 어때요??","이번에 새로산 제 옷 어떤가요?"));
+        itemlist.add(new Evalation_Recycleitem(R.drawable.person3,"면접룩 확인","제 면접룩 괜찮은가요?"));
+        itemlist.add(new Evalation_Recycleitem(R.drawable.person4,"친구들과 여행가기로 했어요!","신상옷을 구매했는데 어떤가요?"));
         return layout;
     }
 }

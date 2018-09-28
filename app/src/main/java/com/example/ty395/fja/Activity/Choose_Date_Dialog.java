@@ -27,19 +27,6 @@ public class Choose_Date_Dialog {
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.dialog_choose_date);
         dialog.show();
-        ic_person1=dialog.findViewById(R.id.ic_person1);
-        ic_person2=dialog.findViewById(R.id.ic_person2);
-        ic_person3=dialog.findViewById(R.id.ic_person3);
-        text_person1=dialog.findViewById(R.id.text_person1);
-        text_person2=dialog.findViewById(R.id.text_person2);
-        text_person3=dialog.findViewById(R.id.text_person3);
-    }
-    public void post(){
-        API retrofit= RetrofitService.getClient().create(API.class);
-        JsonObject jsonObject=new JsonObject();
-        jsonObject.addProperty("id",getEmail);
-        jsonObject.addProperty("pw",getPassword);
-        Call<Void> call= retrofit.post_login(jsonObject);
     }
 
 }

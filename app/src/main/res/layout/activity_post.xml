@@ -121,6 +121,17 @@
                    android:src="@drawable/person1"/>
            </LinearLayout>
        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.7"/>
+        <ImageView
+            android:id="@+id/ic_comment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.4"
+            android:src="@drawable/ic_mode_comment_black_24dp"
+            android:padding="4dp"/>
     </LinearLayout>
     <SlidingDrawer
         android:id="@+id/slide"
@@ -159,7 +170,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="0.05"/>
+                android:layout_weight="0.03"/>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
