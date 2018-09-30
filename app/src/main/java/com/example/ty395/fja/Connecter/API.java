@@ -27,6 +27,9 @@ public interface API {
 
     @POST("commentUpload/postId")
     Call<Void> post_comment(@Body JsonObject jsonObject);
+
+    @POST("assess/upload/controllers.AssessController.uploadPost")
+    Call<Void> post_post(@Body JsonObject jsonObject);
 //    @POST("join/email")
 //    @FormUrlEncoded
 //    Call<RetrofitRepo> post_email(@Field("email") String email);

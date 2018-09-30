@@ -69,7 +69,7 @@ public class MemberActivity extends AppCompatActivity {
                 another.setVisibility(View.VISIBLE);
                 choose_woman.setVisibility(View.INVISIBLE);
                 Toast.makeText(getApplicationContext(), "남자", Toast.LENGTH_SHORT);
-                gender = 0;
+                gender = 1;
             }
         });
         woman.setOnClickListener(new View.OnClickListener() {
@@ -82,7 +82,7 @@ public class MemberActivity extends AppCompatActivity {
                 man.setVisibility(View.VISIBLE);
                 another.setVisibility(View.VISIBLE);
                 Toast.makeText(getApplicationContext(), "여자", Toast.LENGTH_SHORT);
-                gender = 1;
+                gender = 0;
             }
         });
         another.setOnClickListener(new View.OnClickListener() {
