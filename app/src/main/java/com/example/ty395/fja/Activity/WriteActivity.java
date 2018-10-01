@@ -1,64 +1,57 @@
 package com.example.ty395.fja.Activity;
 
 import android.content.Intent;
-import android.database.Cursor;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.media.ExifInterface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Base64;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.ty395.fja.Activity.MainActivity;
 import com.example.ty395.fja.Connecter.API;
+import com.example.ty395.fja.Connecter.PostModel;
 import com.example.ty395.fja.Connecter.RetrofitService;
 import com.example.ty395.fja.R;
-import com.google.gson.JsonObject;
 
-import java.io.IOException;
+import java.io.ByteArrayOutputStream;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class WriteActivity extends AppCompatActivity {
     TextView text_back;
     private int REQ_PICK_CODE = 1112;
-    private Uri photoUri;
-    private String currentPhotoPath;//실제 사진 파일 경로
-    String mImageCaptureName;
     ImageView ic_picture;
+    EditText edit_titie;
+    EditText edit_text;
+    String title;
+    String text;
+    String category;
+    String images;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_write);
         text_back = (TextView) findViewById(R.id.text_back);
-        text_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(), "메인화면으로 이동합니다", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-        TextView text_post = findViewById(R.id.text_post);
-        text_post.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                PostDialog postDialog = new PostDialog(WriteActivity.this);
-                postDialog.CallFuntion();
-            }
-        });
+        ic_picture=findViewById(R.id.ic_picture);
         final Spinner spinner = (Spinner) findViewById(R.id.spinner);
+        edit_text=findViewById(R.id.edit_text);
+        edit_titie=findViewById(R.id.edit_title);
         ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.number, android.R.layout.simple_spinner_item);
         spinner.setAdapter(adapter);
         ImageView ic_camera = findViewById(R.id.ic_camera);
+
         ic_camera.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -74,6 +67,31 @@ public class WriteActivity extends AppCompatActivity {
             public void onClick(View v) {
                 LinkDialog linkDialog = new LinkDialog(WriteActivity.this);
                 linkDialog.Date();
+            }
+        });
+        text_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "메인화면으로 이동합니다", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+        TextView text_post = findViewById(R.id.text_post);
+        text_post.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                text=edit_text.getText().toString();
+                title=edit_titie.getText().toString();
+                category=spinner.getSelectedItem().toString();
+                ByteArrayOutputStream outStream = new ByteArrayOutputStream();
+                Resources res= getResources();
+                Bitmap bitmap = BitmapFactory.decodeResource(res, R.drawable.person1);
+                bitmap.compress(Bitmap.CompressFormat.PNG, 100, outStream);
+                byte[] image = outStream.toByteArray();
+                images = Base64.encodeToString(image, 0);
+                post();
             }
         });
     }
@@ -104,6 +122,22 @@ public class WriteActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
+    }
+    public void post(){
+        API retrofit= RetrofitService.getClient().create(API.class);
+        Call<PostModel> call=retrofit.post_post(title,text,category,images);
+        call.enqueue(new Callback<PostModel>() {
+            @Override
+            public void onResponse(Call<PostModel> call, Response<PostModel> response) {
+                Intent intent=new Intent(WriteActivity.this,MainActivity.class);
+                startActivity(intent);
+            }
+
+            @Override
+            public void onFailure(Call<PostModel> call, Throwable t) {
+
+            }
+        });
     }
 }
 

@@ -21,7 +21,7 @@
         </activity>
         <activity android:name=".Activity.LoginActivity" />
         <activity android:name=".Activity.MainActivity"
-            android:windowSoftInputMode="adjustUnspecified"/>
+            android:windowSoftInputMode="adjustUnspecified" />
         <activity android:name=".Activity.MemberActivity" />
         <activity android:name=".Activity.WriteActivity" />
         <activity android:name=".Activity.PostActivity" />

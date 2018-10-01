@@ -2,16 +2,12 @@ package com.example.ty395.fja.Connecter;
 
 import com.google.gson.JsonObject;
 
-import java.lang.invoke.VolatileCallSite;
-
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
-import retrofit2.http.PUT;
-import retrofit2.http.Query;
 
 public interface API {
 
@@ -28,8 +24,9 @@ public interface API {
     @POST("commentUpload/postId")
     Call<Void> post_comment(@Body JsonObject jsonObject);
 
-    @POST("assess/upload/controllers.AssessController.uploadPost")
-    Call<Void> post_post(@Body JsonObject jsonObject);
+    @POST("assess/upload")
+    @FormUrlEncoded
+    Call<PostModel> post_post(@Field("title")String title,@Field("text")String text,@Field("category")String category,@Field("images")String images);
 //    @POST("join/email")
 //    @FormUrlEncoded
 //    Call<RetrofitRepo> post_email(@Field("email") String email);
