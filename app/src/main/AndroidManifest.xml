@@ -25,6 +25,9 @@
         <activity android:name=".Activity.MemberActivity" />
         <activity android:name=".Activity.WriteActivity" />
         <activity android:name=".Activity.PostActivity" />
+        <activity android:name=".Activity.PostnowActivity"/>
+        <activity android:name=".Activity.PostActivity2"/>
+        <activity android:name=".Activity.PostnowActivity2"/>
     </application>
 
 </manifest>

@@ -1,5 +1,7 @@
 package com.example.ty395.fja.Connecter;
 
+import android.content.Intent;
+
 import com.google.gson.JsonObject;
 
 import retrofit2.Call;
@@ -8,6 +10,8 @@ import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Part;
+import retrofit2.http.Path;
 
 public interface API {
 
@@ -21,12 +25,13 @@ public interface API {
     @GET("fashionista/:date")
     Call<Void> get_fashionista(@Body JsonObject jsonObject);
 
-    @POST("commentUpload/postId")
-    Call<Void> post_comment(@Body JsonObject jsonObject);
+    @POST("assess/commentUpload/:postId")
+    Call<Void> post_comment(@Body JsonObject jsobject);
 
     @POST("assess/upload")
-    @FormUrlEncoded
-    Call<PostModel> post_post(@Field("title")String title,@Field("text")String text,@Field("category")String category,@Field("images")String images);
+    Call<Void> post_post(@Body JsonObject object);
+
+
 //    @POST("join/email")
 //    @FormUrlEncoded
 //    Call<RetrofitRepo> post_email(@Field("email") String email);

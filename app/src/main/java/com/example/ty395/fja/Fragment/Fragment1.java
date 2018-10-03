@@ -1,13 +1,17 @@
 package com.example.ty395.fja.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.ty395.fja.Activity.PostnowActivity;
+import com.example.ty395.fja.Activity.PostnowActivity2;
 import com.example.ty395.fja.Item.EvalationItem;
 import com.example.ty395.fja.Item.Evalation_Recycleitem;
 import com.example.ty395.fja.R;
@@ -15,7 +19,7 @@ import com.example.ty395.fja.Adapter.RecycleAdapter;
 
 import java.util.ArrayList;
 
-public class Fragment1 extends Fragment {
+public class Fragment1 extends Fragment implements View.OnClickListener{
     RecyclerView recyclerView;
     RecycleAdapter recycleAdapter;
     ArrayList<Evalation_Recycleitem> itemlist=new ArrayList<>();
@@ -26,7 +30,8 @@ public class Fragment1 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInsrtanceState){
         ViewGroup layout=(ViewGroup)inflater.inflate(R.layout.fragment_1,container,false);
-        Log.d("Fragment1", "onCreate is called");
+        CardView cardView=layout.findViewById(R.id.item1);
+        cardView.setOnClickListener(this);
         itemlist.clear();
         recyclerView=(RecyclerView) layout.findViewById(R.id.recycler);
         recyclerView.setHasFixedSize(true);
@@ -37,5 +42,11 @@ public class Fragment1 extends Fragment {
         itemlist.add(new Evalation_Recycleitem(R.drawable.person3,"면접룩 확인","제 면접룩 괜찮은가요?"));
         itemlist.add(new Evalation_Recycleitem(R.drawable.person4,"친구들과 여행가기로 했어요!","신상옷을 구매했는데 어떤가요?"));
         return layout;
+    }
+
+    @Override
+    public void onClick(View v) {
+        Intent intent=new Intent(getActivity(), PostnowActivity2.class);
+        startActivity(intent);
     }
 }

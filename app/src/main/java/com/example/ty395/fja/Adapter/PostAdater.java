@@ -7,34 +7,35 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.example.ty395.fja.Activity.CommentDialog;
 import com.example.ty395.fja.Item.CommentItem;
 import com.example.ty395.fja.Item.Comment_Item;
 import com.example.ty395.fja.R;
 
 import java.util.ArrayList;
 
-public class CommentAdapter extends RecyclerView.Adapter<CommentAdapter.ViewHolder> {
-    ArrayList<Comment_Item> comment_items;
-    public CommentAdapter(ArrayList<Comment_Item> comment_item) {
-        this.comment_items = comment_item;
+public class PostAdater extends RecyclerView.Adapter<PostAdater.ViewHolder> {
+    ArrayList<CommentItem> comment_item;
+    public PostAdater(ArrayList<CommentItem> comment_item) {
+        this.comment_item =comment_item ;
     }
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_comment,parent,false);
-        return new CommentAdapter.ViewHolder(view);
+    public PostAdater.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_comment2,parent,false);
+        return new PostAdater.ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Comment_Item commentItem=comment_items.get(position);
+    public void onBindViewHolder(@NonNull PostAdater.ViewHolder holder, int position) {
+        CommentItem commentItem=comment_item.get(position);
         holder.text_nickname.setText(commentItem.getText_nickname());
         holder.text_recommend.setText(commentItem.getText_recommend());
     }
 
     @Override
     public int getItemCount() {
-        return comment_items.size();
+        return comment_item.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

@@ -2,17 +2,17 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="fill_parent"
     android:layout_height="fill_parent">
-<android.support.v7.widget.Toolbar
-    android:id="@+id/toolbar"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/colorPrimary">
-    <ImageView
-        android:id="@+id/ic_back"
-        android:layout_width="wrap_content"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_baseline_arrow_back_24px"/>
-</android.support.v7.widget.Toolbar>
+        android:background="@color/colorPrimary">
+        <ImageView
+            android:id="@+id/ic_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_arrow_back_24px"/>
+    </android.support.v7.widget.Toolbar>
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -48,7 +48,7 @@
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/ic_baseline_gradient_24px"/>
+                        android:src="@drawable/ic_baseline_gradient_32px"/>
                     <View
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
@@ -57,8 +57,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:textColor="#cfcfcf"
-                        android:text="진행완료"/>
+                        android:textColor="#4AC7FF"
+                        android:text="진행중"/>
                 </LinearLayout>
                 <View
                     android:layout_width="match_parent"
@@ -68,7 +68,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="0.8"
-                    android:text="이 옷 어떤가요??"
+                    android:text="데이트 처음나가는 초심자"
                     android:textSize="20sp"
                     android:textColor="@color/text"/>
                 <TextView
@@ -92,35 +92,36 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="0.2"/>
-       <LinearLayout
-           android:layout_width="match_parent"
-           android:layout_height="0dp"
-           android:layout_weight="6"
-           android:weightSum="3"
-           android:orientation="horizontal">
-           <View
-               android:layout_width="0dp"
-               android:layout_height="match_parent"
-               android:layout_weight="0.1"/>
-           <LinearLayout
-               android:layout_width="0dp"
-               android:layout_height="match_parent"
-               android:layout_weight="2.8"
-               android:orientation="vertical"
-               android:weightSum="3">
-               <TextView
-                   android:layout_width="match_parent"
-                   android:layout_height="0dp"
-                   android:layout_weight="2"
-                   android:textSize="12sp"
-                   android:text="오늘 친구들과 같이 나가기로 하였는데 어떤 옷을 입어야 할지 고민이에요!"/>
-               <ImageView
-                   android:layout_width="match_parent"
-                   android:layout_height="0dp"
-                   android:layout_weight="1"
-                   android:src="@drawable/person1"/>
-           </LinearLayout>
-       </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="6"
+            android:weightSum="3"
+            android:orientation="horizontal">
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2.8"
+                android:orientation="vertical"
+                android:weightSum="3">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:textSize="12sp"
+                    android:text="데이트룩입니다 여친이 좋아할까요?"
+                    />
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/person10"/>
+            </LinearLayout>
+        </LinearLayout>
         <View
             android:layout_width="match_parent"
             android:layout_height="0dp"
@@ -195,71 +196,71 @@
                 android:weightSum="3"
                 android:layout_marginLeft="8dp"
                 android:orientation="vertical">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.2"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.8"
+                    android:weightSum="1">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_like"/>
                     <View
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="0.2"/>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="0.8"
-                        android:weightSum="1">
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:src="@drawable/ic_like"/>
-                        <View
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="0.04"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="11명이 좋아합니다."
-                            android:textSize="12sp"/>
-                    </LinearLayout>
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="0.5"/>
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="0.03"
-                        android:background="@color/edit"/>
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="0.5"/>
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1">
-                        <TextView
-                            android:id="@+id/best"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="베스트"
-                            android:textSize="10sp"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="10sp"
-                            android:text="최신순"
-                            android:id="@+id/news"
-                            android:layout_marginLeft="5dp"
-                            android:layout_toRightOf="@id/best"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="연령순"
-                            android:textSize="10sp"
-                            android:layout_toRightOf="@id/news"
-                            android:layout_marginLeft="5dp"/>
-                    </RelativeLayout>
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.04"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="11명이 좋아합니다."
+                        android:textSize="12sp"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.03"
+                    android:background="@color/edit"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+                    <TextView
+                        android:id="@+id/best"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="베스트"
+                        android:textSize="10sp"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="10sp"
+                        android:text="최신순"
+                        android:id="@+id/news"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@id/best"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="연령순"
+                        android:textSize="10sp"
+                        android:layout_toRightOf="@id/news"
+                        android:layout_marginLeft="5dp"/>
+                </RelativeLayout>
             </LinearLayout>
             <android.support.v7.widget.RecyclerView
-                android:id="@+id/recycler"
+                android:id="@+id/recyclerview"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="8"/>

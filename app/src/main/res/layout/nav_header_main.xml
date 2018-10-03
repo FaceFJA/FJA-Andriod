@@ -48,14 +48,14 @@
            android:layout_width="match_parent"
            android:layout_height="0dp"
            android:layout_weight="0.8"
-           android:text="패잘알"
+           android:text="0"
            android:textColor="@android:color/white"
            android:gravity="bottom" />
        <TextView
            android:layout_width="match_parent"
            android:layout_height="0dp"
            android:layout_weight="0.8"
-           android:text="대한민국 서울시"
+           android:text="대한민국 대전광역시"
            android:textColor="@android:color/white"
            android:textSize="11sp"/>
    </LinearLayout>

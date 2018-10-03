@@ -7,38 +7,34 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.SlidingDrawer;
-import android.widget.Toast;
 
 import com.example.ty395.fja.Adapter.CommentAdapter;
-import com.example.ty395.fja.Adapter.RecycleAdapter;
+import com.example.ty395.fja.Adapter.PostAdater;
+import com.example.ty395.fja.Item.CommentItem;
 import com.example.ty395.fja.Item.Comment_Item;
-import com.example.ty395.fja.Item.Evalation_Recycleitem;
 import com.example.ty395.fja.R;
 
 import java.util.ArrayList;
 
-public class PostActivity extends AppCompatActivity {
+public class PostnowActivity extends AppCompatActivity{
     RecyclerView recyclerView;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_post);
-        recyclerView=findViewById(R.id.recycler);
-        final ArrayList<Comment_Item>comment_items=new ArrayList<>();
-        CommentAdapter commentAdapter= new CommentAdapter(comment_items);
+        setContentView(R.layout.activity_post_now);
+        recyclerView=findViewById(R.id.recyclerview);
+        ArrayList<CommentItem>comment_item=new ArrayList<>();
+        PostAdater commentAdapter= new PostAdater(comment_item);
         recyclerView.setAdapter(commentAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        comment_items.add(new Comment_Item("패션왕","잘 어울리네요!"));
-        comment_items.add(new Comment_Item("패션피플","다음엔 다른 스타일로 도전해보심이...."));
-        comment_items.add(new Comment_Item("패션찐따","저는 저런 스타일이 좋아요!"));
-        comment_items.add(new Comment_Item("패.패들ㅇr","무난하게 소화하시네요"));
-        comment_items.add(new Comment_Item("패션천국","짱짱!!"));
-        comment_items.add(new Comment_Item("0","4444"));
-        final ImageView ic_back=findViewById(R.id.ic_back);
+        comment_item.add(new CommentItem("자칭패피","저는 스트릿룩으로 입었답니당"));
+        comment_item.add(new CommentItem("홍대걸","저는 아이유룩을 좋아했습니다."));
+        comment_item.add(new CommentItem("패션보이","음 저는 저 사진대로 입었답니다."));
+        comment_item.add(new CommentItem("박나래","저는 화려한 룩을 좋아해서 즐겨입었어요"));
+        comment_item.add(new CommentItem("춤추는 갈매기","그건 잘 모르겠고 저 코트가 이쁘네요"));
+        comment_item.add(new CommentItem("0","111555"));
+        ImageView ic_back=findViewById(R.id.ic_back);
         ic_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,7 +47,7 @@ public class PostActivity extends AppCompatActivity {
         ic_comment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                CommentDialog commentDialog= new CommentDialog(PostActivity.this);
+                CommentDialog commentDialog= new CommentDialog(PostnowActivity.this);
                 commentDialog.Date();
             }
         });

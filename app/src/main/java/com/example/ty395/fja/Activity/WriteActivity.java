@@ -22,8 +22,10 @@ import com.example.ty395.fja.Connecter.API;
 import com.example.ty395.fja.Connecter.PostModel;
 import com.example.ty395.fja.Connecter.RetrofitService;
 import com.example.ty395.fja.R;
+import com.google.gson.JsonObject;
 
 import java.io.ByteArrayOutputStream;
+import java.util.Random;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -39,6 +41,7 @@ public class WriteActivity extends AppCompatActivity {
     String text;
     String category;
     String images;
+    Integer postid;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,6 +54,8 @@ public class WriteActivity extends AppCompatActivity {
         ArrayAdapter adapter = ArrayAdapter.createFromResource(this, R.array.number, android.R.layout.simple_spinner_item);
         spinner.setAdapter(adapter);
         ImageView ic_camera = findViewById(R.id.ic_camera);
+        Random random= new Random();
+        postid=random.nextInt(10000);
 
         ic_camera.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -84,13 +89,12 @@ public class WriteActivity extends AppCompatActivity {
             public void onClick(View v) {
                 text=edit_text.getText().toString();
                 title=edit_titie.getText().toString();
-                category=spinner.getSelectedItem().toString();
-                ByteArrayOutputStream outStream = new ByteArrayOutputStream();
-                Resources res= getResources();
-                Bitmap bitmap = BitmapFactory.decodeResource(res, R.drawable.person1);
-                bitmap.compress(Bitmap.CompressFormat.PNG, 100, outStream);
-                byte[] image = outStream.toByteArray();
-                images = Base64.encodeToString(image, 0);
+//                ByteArrayOutputStream outStream = new ByteArrayOutputStream();
+//                Resources res= getResources();
+//                Bitmap bitmap = BitmapFactory.decodeResource(res, R.drawable.person1);
+//                bitmap.compress(Bitmap.CompressFormat.PNG, 100, outStream);
+//                byte[] image = outStream.toByteArray();
+//                images = Base64.encodeToString(image, 0);
                 post();
             }
         });
@@ -125,16 +129,23 @@ public class WriteActivity extends AppCompatActivity {
     }
     public void post(){
         API retrofit= RetrofitService.getClient().create(API.class);
-        Call<PostModel> call=retrofit.post_post(title,text,category,images);
-        call.enqueue(new Callback<PostModel>() {
+        JsonObject jsonObject=new JsonObject();
+        jsonObject.addProperty("title",title);
+        jsonObject.addProperty("text",text);
+        jsonObject.addProperty("category","결혼식");
+        jsonObject.addProperty("images","images");
+        Call<Void> call=retrofit.post_post(jsonObject);
+        call.enqueue(new Callback<Void>() {
             @Override
-            public void onResponse(Call<PostModel> call, Response<PostModel> response) {
-                Intent intent=new Intent(WriteActivity.this,MainActivity.class);
-                startActivity(intent);
+            public void onResponse(Call<Void> call, Response<Void> response) {
+                if(response.code()==404){
+                    Intent intent=new Intent(WriteActivity.this,MainActivity.class);
+                    startActivity(intent);
+                }
             }
 
             @Override
-            public void onFailure(Call<PostModel> call, Throwable t) {
+            public void onFailure(Call<Void> call, Throwable t) {
 
             }
         });
