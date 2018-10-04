@@ -68,14 +68,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="0.8"
-                    android:text="이 옷 어떤가요??"
+                    android:text="오늘은 어떤 옷을 입고 나가는게 좋을까요?"
                     android:textSize="20sp"
                     android:textColor="@color/text"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="0.4"
-                    android:text="2018.10.03 08 : 15 | 조회 2"
+                    android:text="2018.9.17 08 : 15 | 조회 15"
                     android:textSize="10sp"/>
                 <View
                     android:layout_width="match_parent"

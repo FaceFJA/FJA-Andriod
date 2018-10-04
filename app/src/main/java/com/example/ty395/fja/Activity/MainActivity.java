@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Fragment4 fragment4;
     private Animation fab_open, fab_close;
     private Boolean isFabOpen = false;
-    private FloatingActionButton fab, fab1;
+    private FloatingActionButton fab, fab1,fab2;
     BackPressCloseHandler backPressCloseHandler;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,8 +67,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         fab_close = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fab_close);
         fab = (FloatingActionButton) findViewById(R.id.fab);
         fab1 = (FloatingActionButton) findViewById(R.id.fab1);
+        fab2=findViewById(R.id.fab2);
         fab1.setOnClickListener(this);
         fab.setOnClickListener(this);
+        fab2.setOnClickListener(this);
         getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment1).commit();
         //기본으로 첫번째 Fragment를 보여지도록 설정
 
@@ -124,9 +126,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.fab1:
                 anim();
-                Toast.makeText(getApplicationContext(), "글쓰기 화면으로 이동합니다", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "평가 글쓰기 화면으로 이동합니다", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(getApplicationContext(), WriteActivity.class);
                 startActivity(intent);
+                finish();
+            case R.id.fab2:
+                anim();
+                Toast.makeText(getApplicationContext(), "토론 글쓰기 화면으로 이동합니다", Toast.LENGTH_SHORT).show();
+                Intent intent2 = new Intent(getApplicationContext(), WriteActivity.class);
+                startActivity(intent2);
                 finish();
                 break;
         }
@@ -136,10 +144,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (isFabOpen) {
             fab1.startAnimation(fab_close);
             fab1.setClickable(false);
+            fab2.setAnimation(fab_close);
+            fab2.setClickable(false);
             isFabOpen = false;
         } else {
             fab1.startAnimation(fab_open);
             fab1.setClickable(true);
+            fab2.setAnimation(fab_open);
+            fab2.setClickable(true);
             isFabOpen = true;
         }
     }
@@ -168,6 +180,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if (id == R.id.nav_weather) {
             SettingDialog settingDialog = new SettingDialog(MainActivity.this);
             settingDialog.Date();
+        }
+        if (id == R.id.nav_write){
+            Intent intent=new Intent(MainActivity.this,WriteMenuActivity.class);
+            startActivity(intent);
         }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

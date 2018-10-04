@@ -28,6 +28,8 @@
         <activity android:name=".Activity.PostnowActivity"/>
         <activity android:name=".Activity.PostActivity2"/>
         <activity android:name=".Activity.PostnowActivity2"/>
+        <activity android:name=".Activity.MyWriteActivity"/>
+        <activity android:name=".Activity.WriteMenuActivity"/>
     </application>
 
 </manifest>
