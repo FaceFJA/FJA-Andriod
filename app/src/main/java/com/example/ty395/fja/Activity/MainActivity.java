@@ -166,7 +166,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         int id = item.getItemId();
 
         if (id == R.id.nav_weather) {
-            Toast.makeText(getApplicationContext(), "환경설정", Toast.LENGTH_SHORT).show();
             SettingDialog settingDialog = new SettingDialog(MainActivity.this);
             settingDialog.Date();
         }

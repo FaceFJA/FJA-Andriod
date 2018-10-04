@@ -49,5 +49,13 @@ public class PostnowActivity2 extends AppCompatActivity {
                 commentDialog.Date();
             }
         });
+        ImageView ic_star=findViewById(R.id.ic_star);
+        ic_star.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                StarDialog starDialog=new StarDialog(PostnowActivity2.this);
+                starDialog.Star();
+            }
+        });
     }
 }
