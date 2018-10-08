@@ -205,6 +205,7 @@
                         android:layout_weight="0.8"
                         android:weightSum="1">
                         <ImageView
+                            android:id="@+id/ic_heart"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:src="@drawable/ic_like"/>
@@ -213,9 +214,15 @@
                             android:layout_height="match_parent"
                             android:layout_weight="0.04"/>
                         <TextView
+                            android:id="@+id/text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="8명이 좋아합니다."
+                            android:text="8"
+                            android:textSize="12sp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="명이 좋아합니다."
                             android:textSize="12sp"/>
                     </LinearLayout>
                     <View

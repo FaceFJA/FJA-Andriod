@@ -32,5 +32,13 @@ public class WriteMenuActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        CardView cardView1=findViewById(R.id.item2);
+        cardView1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(WriteMenuActivity.this,MyWriteActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

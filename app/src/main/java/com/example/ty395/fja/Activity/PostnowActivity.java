@@ -8,6 +8,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.ty395.fja.Adapter.CommentAdapter;
 import com.example.ty395.fja.Adapter.PostAdater;
@@ -19,6 +20,7 @@ import java.util.ArrayList;
 
 public class PostnowActivity extends AppCompatActivity{
     RecyclerView recyclerView;
+    int i=19;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,12 +30,9 @@ public class PostnowActivity extends AppCompatActivity{
         PostAdater commentAdapter= new PostAdater(comment_item);
         recyclerView.setAdapter(commentAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        comment_item.add(new CommentItem("자칭패피","저는 스트릿룩으로 입었답니당"));
-        comment_item.add(new CommentItem("홍대걸","저는 아이유룩을 좋아했습니다."));
-        comment_item.add(new CommentItem("패션보이","음 저는 저 사진대로 입었답니다."));
-        comment_item.add(new CommentItem("박나래","저는 화려한 룩을 좋아해서 즐겨입었어요"));
-        comment_item.add(new CommentItem("춤추는 갈매기","그건 잘 모르겠고 저 코트가 이쁘네요"));
-        comment_item.add(new CommentItem("0","111555"));
+        recyclerView.setVisibility(View.INVISIBLE);
+        final TextView text=findViewById(R.id.text);
+        comment_item.add(new CommentItem("0","7777"));
         ImageView ic_back=findViewById(R.id.ic_back);
         ic_back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,6 +48,15 @@ public class PostnowActivity extends AppCompatActivity{
             public void onClick(View v) {
                 CommentDialog commentDialog= new CommentDialog(PostnowActivity.this);
                 commentDialog.Date();
+                recyclerView.setVisibility(View.VISIBLE);
+            }
+        });
+        ImageView ic_heart=findViewById(R.id.ic_heart);
+        ic_heart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                i +=1;
+                text.setText(String.valueOf(i));
             }
         });
     }

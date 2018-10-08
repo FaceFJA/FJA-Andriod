@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.SlidingDrawer;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.ty395.fja.Adapter.CommentAdapter;
@@ -23,6 +24,7 @@ import java.util.ArrayList;
 
 public class PostActivity extends AppCompatActivity {
     RecyclerView recyclerView;
+    int i=8;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,12 +34,9 @@ public class PostActivity extends AppCompatActivity {
         CommentAdapter commentAdapter= new CommentAdapter(comment_items);
         recyclerView.setAdapter(commentAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        comment_items.add(new Comment_Item("패션왕","잘 어울리네요!"));
-        comment_items.add(new Comment_Item("패션피플","다음엔 다른 스타일로 도전해보심이...."));
-        comment_items.add(new Comment_Item("패션찐따","저는 저런 스타일이 좋아요!"));
-        comment_items.add(new Comment_Item("패.패들ㅇr","무난하게 소화하시네요"));
-        comment_items.add(new Comment_Item("패션천국","짱짱!!"));
-        comment_items.add(new Comment_Item("0","4444"));
+        recyclerView.setVisibility(View.INVISIBLE);
+        final TextView text=findViewById(R.id.text);
+        comment_items.add(new Comment_Item("0","7777"));
         final ImageView ic_back=findViewById(R.id.ic_back);
         ic_back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,6 +52,15 @@ public class PostActivity extends AppCompatActivity {
             public void onClick(View v) {
                 CommentDialog commentDialog= new CommentDialog(PostActivity.this);
                 commentDialog.Date();
+                recyclerView.setVisibility(View.VISIBLE);
+            }
+        });
+        ImageView ic_heart=findViewById(R.id.ic_heart);
+        ic_heart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                i +=1;
+                text.setText(String.valueOf(i));
             }
         });
     }

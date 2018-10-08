@@ -26,12 +26,8 @@ public class PostnowActivity2 extends AppCompatActivity {
         PostAdater commentAdapter= new PostAdater(comment_item);
         recyclerView.setAdapter(commentAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        comment_item.add(new CommentItem("패션왕","이정도면 짱이네요"));
-        comment_item.add(new CommentItem("홍대왕","무난한 옷이네용"));
-        comment_item.add(new CommentItem("패션찐따","저는 저런 스타일이 좋아요!"));
-        comment_item.add(new CommentItem("패.패들ㅇr","무난하게 소화하시네요"));
-        comment_item.add(new CommentItem("이유같지 않은 이유","그 옷 어디서 사셨어요????"));
-        comment_item.add(new CommentItem("0","555222"));
+        recyclerView.setVisibility(View.INVISIBLE);
+        comment_item.add(new CommentItem("0","7777"));
         ImageView ic_back=findViewById(R.id.ic_back);
         ic_back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,6 +43,7 @@ public class PostnowActivity2 extends AppCompatActivity {
             public void onClick(View v) {
                 CommentDialog commentDialog= new CommentDialog(PostnowActivity2.this);
                 commentDialog.Date();
+                recyclerView.setVisibility(View.VISIBLE);
             }
         });
         ImageView ic_star=findViewById(R.id.ic_star);
