@@ -9,6 +9,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 import com.example.ty395.fja.Activity.PostnowActivity;
 import com.example.ty395.fja.Activity.PostnowActivity2;
@@ -30,8 +33,14 @@ public class Fragment1 extends Fragment implements View.OnClickListener{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInsrtanceState){
         ViewGroup layout=(ViewGroup)inflater.inflate(R.layout.fragment_1,container,false);
-        CardView cardView=layout.findViewById(R.id.item1);
-        cardView.setOnClickListener(this);
+        final CardView cardView=layout.findViewById(R.id.item1);
+        final CardView cardView1=layout.findViewById(R.id.item2);
+        final Spinner spinner=layout.findViewById(R.id.spinner);
+        String item=spinner.getSelectedItem().toString();
+        if(item.equals("졸업식")){
+            cardView.setVisibility(View.INVISIBLE);
+            cardView1.setVisibility(View.VISIBLE);
+        }
         itemlist.clear();
         recyclerView=(RecyclerView) layout.findViewById(R.id.recycler);
         recyclerView.setHasFixedSize(true);
