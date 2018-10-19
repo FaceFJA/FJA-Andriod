@@ -27,6 +27,8 @@ public class MyWriteActivity extends AppCompatActivity {
         PostAdater commentAdapter= new PostAdater(comment_item);
         recyclerView.setAdapter(commentAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setVisibility(View.INVISIBLE);
+        comment_item.add(new CommentItem("5","7777"));
         ImageView ic_back=findViewById(R.id.ic_back);
         ic_back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +44,7 @@ public class MyWriteActivity extends AppCompatActivity {
             public void onClick(View v) {
                 CommentDialog commentDialog= new CommentDialog(MyWriteActivity.this);
                 commentDialog.Date();
+                recyclerView.setVisibility(View.VISIBLE);
             }
         });
         ImageView ic_star=findViewById(R.id.ic_star);

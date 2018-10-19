@@ -13,6 +13,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
+import com.example.ty395.fja.Activity.MyWriteActivity;
 import com.example.ty395.fja.Activity.PostnowActivity;
 import com.example.ty395.fja.Activity.PostnowActivity2;
 import com.example.ty395.fja.Item.EvalationItem;
@@ -22,7 +23,7 @@ import com.example.ty395.fja.Adapter.RecycleAdapter;
 
 import java.util.ArrayList;
 
-public class Fragment1 extends Fragment implements View.OnClickListener{
+public class Fragment1 extends Fragment{
     RecyclerView recyclerView;
     RecycleAdapter recycleAdapter;
     ArrayList<Evalation_Recycleitem> itemlist=new ArrayList<>();
@@ -35,6 +36,20 @@ public class Fragment1 extends Fragment implements View.OnClickListener{
         ViewGroup layout=(ViewGroup)inflater.inflate(R.layout.fragment_1,container,false);
         final CardView cardView=layout.findViewById(R.id.item1);
         final CardView cardView1=layout.findViewById(R.id.item2);
+        cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getActivity(),MyWriteActivity.class);
+                startActivity(intent);
+            }
+        });
+        cardView1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getActivity(),PostnowActivity2.class);
+                startActivity(intent);
+            }
+        });
         final Spinner spinner=layout.findViewById(R.id.spinner);
         String item=spinner.getSelectedItem().toString();
         if(item.equals("졸업식")){
@@ -53,9 +68,4 @@ public class Fragment1 extends Fragment implements View.OnClickListener{
         return layout;
     }
 
-    @Override
-    public void onClick(View v) {
-        Intent intent=new Intent(getActivity(), PostnowActivity2.class);
-        startActivity(intent);
-    }
 }

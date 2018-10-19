@@ -18,11 +18,11 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class LoginActivity extends AppCompatActivity {
-Button bt_login;
-EditText edit_email;
-EditText edit_password;
-String getEmail;
-String getPassword;
+    Button bt_login;
+    EditText edit_email;
+    EditText edit_password;
+    String getEmail;
+    String getPassword;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,9 +57,9 @@ String getPassword;
             public void onResponse(Call<Void> call, Response<Void> response) {
                 Void repo = response.body();
                 if(response.code()==200) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
-                finish();
+                    Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                    startActivity(intent);
+                    finish();
                 }
                 else{
                     Toast.makeText(getApplicationContext(),"아이디 혹은 비밀번호가 맞지 않습니다.",Toast.LENGTH_SHORT).show();

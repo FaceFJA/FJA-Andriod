@@ -130,6 +130,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent intent = new Intent(getApplicationContext(), WriteActivity.class);
                 startActivity(intent);
                 finish();
+                break;
             case R.id.fab2:
                 anim();
                 Toast.makeText(getApplicationContext(), "토론 글쓰기 화면으로 이동합니다", Toast.LENGTH_SHORT).show();

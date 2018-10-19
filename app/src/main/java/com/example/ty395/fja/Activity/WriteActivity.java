@@ -138,7 +138,7 @@ public class WriteActivity extends AppCompatActivity {
         call.enqueue(new Callback<Void>() {
             @Override
             public void onResponse(Call<Void> call, Response<Void> response) {
-                if(response.code()==404){
+                if(response.code()==201){
                     Toast.makeText(getApplicationContext(),"게시글 작성이 완료되었습니다.",Toast.LENGTH_SHORT).show();
                     Intent intent=new Intent(WriteActivity.this,MainActivity.class);
                     startActivity(intent);
