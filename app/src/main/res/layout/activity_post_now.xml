@@ -172,11 +172,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="0.03"/>
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="0.009"
-                android:background="@color/back"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -194,7 +189,6 @@
                 android:layout_height="0dp"
                 android:layout_weight="1.5"
                 android:weightSum="3"
-                android:layout_marginLeft="8dp"
                 android:orientation="vertical">
                 <View
                     android:layout_width="match_parent"
@@ -209,6 +203,7 @@
                         android:id="@+id/ic_heart"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
                         android:src="@drawable/ic_like"/>
                     <View
                         android:layout_width="0dp"
@@ -243,27 +238,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1">
-                    <TextView
-                        android:id="@+id/best"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="베스트"
-                        android:textSize="10sp"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="10sp"
-                        android:text="최신순"
-                        android:id="@+id/news"
-                        android:layout_marginLeft="5dp"
-                        android:layout_toRightOf="@id/best"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="연령순"
-                        android:textSize="10sp"
-                        android:layout_toRightOf="@id/news"
-                        android:layout_marginLeft="5dp"/>
                 </RelativeLayout>
             </LinearLayout>
             <android.support.v7.widget.RecyclerView

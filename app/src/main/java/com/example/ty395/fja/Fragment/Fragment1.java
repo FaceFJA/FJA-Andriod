@@ -33,28 +33,28 @@ public class Fragment1 extends Fragment{
     }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInsrtanceState){
-        ViewGroup layout=(ViewGroup)inflater.inflate(R.layout.fragment_1,container,false);
-        final CardView cardView=layout.findViewById(R.id.item1);
-        final CardView cardView1=layout.findViewById(R.id.item2);
-        cardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(getActivity(),MyWriteActivity.class);
-                startActivity(intent);
-            }
-        });
-        cardView1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(getActivity(),PostnowActivity2.class);
-                startActivity(intent);
-            }
-        });
+        ViewGroup layout=(ViewGroup)inflater.inflate(R.layout.fragment_evalation,container,false);
+//        final CardView cardView=layout.findViewById(R.id.item1);
+//        final CardView cardView1=layout.findViewById(R.id.item2);
+//        cardView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent=new Intent(getActivity(),MyWriteActivity.class);
+//                startActivity(intent);
+//            }
+//        });
+//        cardView1.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent=new Intent(getActivity(),PostnowActivity2.class);
+//                startActivity(intent);
+//            }
+//        });
         final Spinner spinner=layout.findViewById(R.id.spinner);
         String item=spinner.getSelectedItem().toString();
         if(item.equals("졸업식")){
-            cardView.setVisibility(View.INVISIBLE);
-            cardView1.setVisibility(View.VISIBLE);
+//            cardView.setVisibility(View.INVISIBLE);
+//            cardView1.setVisibility(View.VISIBLE);
         }
         itemlist.clear();
         recyclerView=(RecyclerView) layout.findViewById(R.id.recycler);
